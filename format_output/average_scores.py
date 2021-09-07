@@ -37,5 +37,7 @@ avg = (score1 + score2 + score3 )/NUM_SCORES
 #printing result
 print(f'{first_name} {last_name} Your average score is {avg}. Congrats or Condolences as appropriate.')
 
-
-
+#tested with 100, 50, and 0 got 50.0 as a result
+#tested with 20, 10, and 5 got 11.6666666667 as a result
+#testeed with -500, 9000000000, and 0 got 2999999833.3333335 as a result
+#tested by entering letters in the scores section - got error due to not being able to conver to an int.
