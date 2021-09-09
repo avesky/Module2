@@ -16,28 +16,30 @@ Example output:
 Rodriguez, Linda age: 21 average grade: 92.50
 Add doctring to the top of your file, add comments at the bottom with observed output after a few manual test runs of your code..
 """
-from constants import NUM_SCORES
+# from constants import NUM_SCORES
 
 #asking for Name inputs
 first_name = input('First Name? ')
 last_name = input('Last Name? ')
 
+NUM_SCORES = int(input('How many things did you fail?? '))
 
 #prompting user what is happening
 print(f'Hello {first_name} {last_name} you will enter {NUM_SCORES} scores and I will calculate the average for you.')
 
 #asking for Score Inputs
-score1 = int(input('Enter score 1: '))
-score2 = int(input('Enter score 2: '))
-score3 = int(input('Enter score 3: '))
+score = 0
+for x in range(1, NUM_SCORES+1):
+  score += int(input(f'Enter score {x}: '))
+
 
 #completing average calculation
-avg = (score1 + score2 + score3 )/NUM_SCORES
+avg = (score )/NUM_SCORES
 
 #printing result
 print(f'{first_name} {last_name} Your average score is {avg}. Congrats or Condolences as appropriate.')
 
 #tested with 100, 50, and 0 got 50.0 as a result
 #tested with 20, 10, and 5 got 11.6666666667 as a result
-#testeed with -500, 9000000000, and 0 got 2999999833.3333335 as a result
+#tested with -500, 9000000000, and 0 got 2999999833.3333335 as a result
 #tested by entering letters in the scores section - got error due to not being able to conver to an int.
